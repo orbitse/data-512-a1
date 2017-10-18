@@ -1,7 +1,12 @@
 # data-512-a1: DATA 512 Assignment 1
 
-### __Goal of Project__
-  To analyze views of English Wikipedia pages from 2008 - 2017. This README file contains information to reproduce the analysis, including data descriptions, attributions and provenance information, and descriptions of all relevant resources and documentation (inside and outside the repo) and hyperlinks to those resources.
+### __Goal of Project__  
+
+  The goal is to follow best practices for open scientific research while constructing, analyzing, and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through September 30, 2017. The resulting project should contain enough information to be fully reproducible by others: from data collection to data analysis.  
+
+  This project documents (1) the combination of Wikipedia traffic data from two different Wikimedia REST API endpoints into a single dataset, (2) the data wrangling steps necessary to consolidate five JSON files into a single CSV file, and (3) the visual analysis of the clean data.  
+
+  This README file contains the information needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
   
 ### __About Data__
  - The Wikipedia page view data used in this analysis was provided under an [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
