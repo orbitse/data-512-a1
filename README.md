@@ -26,14 +26,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  - For more information, see the Wikimedia Foundation terms of use [LINK](https://wikimediafoundation.org/wiki/Terms_of_Use/en). 
- - List any known issues or special considerations with the data that would be useful for another researcher to know.
- - For example, you should describe that data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not.
+ 
+### __Data Issues__
+ - issues or special considerations with the data that would be useful for another researcher to know.  
 
 ### __API Documentation__
 The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews API. 
  - The legacy __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from January 2008 through July 2016.
- - The __Pageviews API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through September 2017.
+ - The __Pageviews API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through September 2017.  
+ The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the agent parameter to agent = user. While the older Pagecount API does not allow you to filter by agent. 
 
-### Final Data File: en-wikipedia_traffic_200801-201709.csv
-Describe the values of all fields in your final data file.
+### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv
+The columns in the combined CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
+Describe the values of all fields in your final data file. 
 
