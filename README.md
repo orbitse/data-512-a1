@@ -2,14 +2,19 @@
 
 ### __About Project__  
 
-  The goal of this project is to follow best practices for open scientific research while constructing, analyzing, and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through September 30, 2017. The resulting project should contain enough information to be fully reproducible by others: from data collection to data analysis.  
+  The goal of this project is to follow best practices for open scientific research while constructing, analyzing,  
+  and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through Sept. 30, 2017.  
+  The resulting project should contain enough information to be fully reproducible by others:  
+  from data collection to data analysis.  
 
   This project documents:  
-  > (1) the code to combine Wikipedia traffic data from two different Wikimedia REST API endpoints into a single dataset,  
+  > (1) the code to combine Wikipedia traffic data from two Wikimedia REST APIs into a single dataset,  
   > (2) the data wrangling steps necessary to consolidate five JSON files into a single CSV file, and  
   > (3) the visual analysis of the formatted data.  
 
-  This README file and the Jupyter Notebook file, hcds-a1-data-curation.ipynb, contain the information and references needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
+  This README file and the Jupyter Notebook file, hcds-a1-data-curation.ipynb, contain the information and  
+  references needed to reproduce the analysis, including a description of the data and all relevant resources  
+  and documentation, with hyperlinks to those resources.  
   
 ### __About Data__
 
@@ -31,26 +36,34 @@ For more information on the this license, see [Apache 2.0 License](http://www.ap
 For information on Wikipedia's terms of use, see the Wikimedia Foundation terms of use [LINK](https://wikimediafoundation.org/wiki/Terms_of_Use/en). 
 
 ### Sample Visualization of Data
-![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/WikipediaDataPlot_Std.png)
-This visualization of the Wikipedia page view data was created with matplotlib and without the Seaborn style. See the Jupyter Notebook file, hcds-a1-data-curation.ipynb, for the instructions on how to create this visualization.
+![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/WikipediaDataPlot_Std.png)  
+This visualization of the Wikipedia page view data was created with matplotlib and without the Seaborn style.  
+See the Jupyter Notebook file, hcds-a1-data-curation.ipynb, for the instructions on how to create this visualization.
 
 ### __API Documentation__
-
+ 
 The Wikipedia page view data used in this project came from two APIs: Pagecounts API and Pageviews API. 
 
- - __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from January 2008 through July 2016. This, older, legacy Pagecount API does not allow you to filter by user, so the monthly counts include views by people, bots, and webcrawlers.  
+ - __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from January 2008 through July 2016.  
+ This, older, legacy Pagecount API does not allow you to filter by user, so the monthly counts include all  
+ the views by people, bots, and webcrawlers.  
 
- - __Pageviews API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through September 2017. The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the agent parameter to agent = user.  
+ - __Pageviews API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through September 2017.  
+ The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the  
+ agent parameter to agent = user.  
  
-The above documentation explains the parameters you can set. For example, both the Pageview and Pagecount APIs allow you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.  
+The above documentation explains the parameters you can set. For example, both the Pageview and Pagecount APIs allow  
+you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.  
 
 For additional information about how the APIs were used, see the Jupyter Notebook file, hcds-a1-data-curation.ipynb.
  
 ### __Other Tools__
 
-In addition to the APIs described above, the Jupyter Notebook file in this repository, hcds-a1-data-curation.ipynb, contains the python code to get, parse, save, consolidate, and visualize the data.  
+In addition to the APIs described above, the Jupyter Notebook file in this repository, hcds-a1-data-curation.ipynb,  
+contains the python code to get, parse, save, consolidate, and visualize the data.  
 
-Jupyter Notebook is an open-source web application for viewing and distributing code. To install Jupyter Notebook or review documentation, visit https://jupyter.org.  
+Jupyter Notebook is an open-source web application for viewing and distributing code.  
+To install Jupyter Notebook or review documentation, visit https://jupyter.org.  
 
 You will need python 3.X and the following python libraries to run the code in hcds-a1-data-curation.ipynb.  
   - [matplotlib](https://matplotlib.org) : will be used for data visualization
@@ -59,7 +72,9 @@ You will need python 3.X and the following python libraries to run the code in h
   
   If necessary, you can pip install any of the above libraries, for example:  
   `pip install requests` or `pip3 install requests`.  
-  Additionally, if you have any version of python 3.X installed, you should already have the csv, json, and requests dependency libraries installed. These libraries will be used to get and save data in notebook file, hcds-a1-data-curation.ipynb. 
+  Additionally, if you have any version of python 3.X installed, you should already have the csv, json,  
+  and requests dependency libraries installed. These libraries will be used to get and save data in notebook  
+  file, hcds-a1-data-curation.ipynb. 
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv  
 
