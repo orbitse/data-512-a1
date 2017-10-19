@@ -9,7 +9,7 @@
   This README file contains the information needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
   
 ### __About Data__
- - The Wikipedia page view data used in this analysis was provided under an [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
+The Wikipedia page view data used in this analysis was provided under an [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
  
  Copyright 2017 Erin Orbits
 
@@ -25,10 +25,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
- - For more information, see the Wikimedia Foundation terms of use [LINK](https://wikimediafoundation.org/wiki/Terms_of_Use/en). 
+For more information on Wikipedia's terms of use, see the Wikimedia Foundation terms of use [LINK](https://wikimediafoundation.org/wiki/Terms_of_Use/en). 
  
-### __Data Issues__
- - issues or special considerations with the data that would be useful for another researcher to know.  
+#### __Additional Data Information__
+ - Both the Pageview and Pagecount APIs allow you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.
+ - The Pageview Wikipedia API does allow you to get page view data from non-users like bots
 
 ### __API Documentation__
 The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews API. 
@@ -37,7 +38,7 @@ The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews AP
  The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the agent parameter to agent = user. While the older Pagecount API does not allow you to filter by agent. 
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv
-The columns in the combined CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
+The columns in the final, consolidated CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
   - pagecount_all_views = pagecount_desktop_views + pagecount_mobile_views
   - pagecount_desktop_views = the monthly views of the main English Wikipedia pages from Jan. 2008 through July 2016
   - pagecount_mobile_views = the monthly views of the mobile version of the English Wikipedia pages from Jan. 2008 through July 2016
@@ -45,6 +46,5 @@ The columns in the combined CSV file include: year, month, pagecount_all_views, 
   - pageview_desktop_views = the monthly views by people rather than bots or web crawlers of the main English Wikipedia pages from July 2015 through Sept. 2017
   - pageview_mobile_views = the monthly views by people rather than bots or web crawlers of both the mobile English Wikipedia pages and via the mobile app from July 2015 through Sept. 2017
 
-
-  
-
+### Sample Visualization of Data
+![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/path/to/WikipediaDataPlot_Std.png)
