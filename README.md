@@ -6,33 +6,30 @@
 
   This project documents (1) the code to combine Wikipedia traffic data from two different Wikimedia REST API endpoints into a single dataset, (2) the data wrangling steps necessary to consolidate five JSON files into a single CSV file, and (3) the visual analysis of the clean data.  
 
-  This README file contains the information needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
+  This README file contains the information and references needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
   
 ### __About Data__
 
 #### Copyright
+The Wikipedia page view data was gathered from the Wikimedia REST API, Wikimedia Foundation, 2017. CC-BY-SA 3.0  
 
-The Wikipedia page view data used in this analysis was provided under an [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
- 
- Copyright 2017 Erin Orbits
+#### License
+This Wikimedia Foundation data is licensed under an Apache 2.0 License, which includes in part:  
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
+Unless required by applicable law or agreed to in writing, software 
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
+limitations under the License.  
+
+For more information on the this license, see [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
 
 #### Terms of Use
 For information on Wikipedia's terms of use, see the Wikimedia Foundation terms of use [LINK](https://wikimediafoundation.org/wiki/Terms_of_Use/en). 
 
 ### Sample Visualization of Data
 ![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/WikipediaDataPlot_Std.png)
+This visualization of the Wikipedia page view data was created with matplotlib and without the Seaborn style. See the Jupyter Notebook file, hcds-a1-data-curation.ipynb, for the instructions on how to create this visualization.
 
 ### __API Documentation__
 
@@ -56,7 +53,7 @@ You will need python 3.X and the following python libraries to run the code in h
   - [seaborn](http://seaborn.pydata.org) -- Note: this library is only for style purposes and is not essential
   
   If necessary, you can pip install any of the above libraries, _e.g._ `pip install requests` or `pip3 install requests`.  
-  Additionally, if you have any version of python 3.X installed, you should already have the csv, json, and requests libraries installed. Those libraries will also be used in hcds-a1-data-curation.ipynb. 
+  Additionally, if you have any version of python 3.X installed, you should already have the csv, json, and requests dependency libraries installed. These libraries will also be used along with matplotlib, pandas, and seaborn in hcds-a1-data-curation.ipynb. 
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv  
 
