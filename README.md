@@ -66,5 +66,5 @@ The columns in the final, consolidated CSV file include: year, month, pagecount_
   - pagecount_desktop_views: monthly views of the main English Wikipedia pages from Jan. 2008 - July 2016
   - pagecount_mobile_views: monthly views of the mobile version of the English Wikipedia pages from Jan. 2008 - July 2016
   - pageview_all_views = pageview_desktop_views + pageview_mobile_views
-  - pageview_desktop_views: monthly page views by users rather than bots or web crawlers of the main English Wikipedia pages from July 2015 - Sept. 2017  
+  - pageview_desktop_views: monthly page views by users rather than bots or web crawlers of the main English Wikipedia pages from July 2015 - Sept. 2017
   - pageview_mobile_views: monthly page views by users of both the mobile English Wikipedia pages and via the mobile app from July 2015 - Sept. 2017
