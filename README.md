@@ -1,4 +1,4 @@
-# data-512-a1: DATA 512 Assignment 1
+## data-512-a1: DATA 512 Assignment 1
 
 ### __Goal of Project__  
 
@@ -31,6 +31,9 @@ For more information on Wikipedia's terms of use, see the Wikimedia Foundation t
  - Both the Pageview and Pagecount APIs allow you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.
  - The Pageview Wikipedia API does allow you to get page view data from non-users like bots
 
+### Sample Visualization of Data
+![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/WikipediaDataPlot_Std.png)
+
 ### __API Documentation__
 The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews API. 
  - The legacy __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from January 2008 through July 2016.
@@ -40,11 +43,8 @@ The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews AP
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv
 The columns in the final, consolidated CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
   - pagecount_all_views = pagecount_desktop_views + pagecount_mobile_views
-  - pagecount_desktop_views = the monthly views of the main English Wikipedia pages from Jan. 2008 through July 2016
-  - pagecount_mobile_views = the monthly views of the mobile version of the English Wikipedia pages from Jan. 2008 through July 2016
+  - pagecount_desktop_views = the monthly views of the main English Wikipedia pages from Jan. 2008 - July 2016
+  - pagecount_mobile_views = the monthly views of the mobile version of the English Wikipedia pages from Jan. 2008 - July 2016
   - pageview_all_views = pageview_desktop_views + pageview_mobile_views
-  - pageview_desktop_views = the monthly views by people rather than bots or web crawlers of the main English Wikipedia pages from July 2015 through Sept. 2017
-  - pageview_mobile_views = the monthly views by people rather than bots or web crawlers of both the mobile English Wikipedia pages and via the mobile app from July 2015 through Sept. 2017
-
-### Sample Visualization of Data
-![alt text](https://raw.githubusercontent.com/orbitse/data-512-a1/master/path/to/WikipediaDataPlot_Std.png)
+  - pageview_desktop_views = the monthly page views by users rather than bots or web crawlers of the main English Wikipedia pages from July 2015 - Sept. 2017
+  - pageview_mobile_views = the monthly page views by users of both the mobile English Wikipedia pages and via the mobile app from July 2015 - Sept. 2017
