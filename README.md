@@ -38,5 +38,13 @@ The Wikipedia page view data came from two APIs: Pagecounts API and Pageviews AP
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv
 The columns in the combined CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
-Describe the values of all fields in your final data file. 
+  - pagecount_all_views = pagecount_desktop_views + pagecount_mobile_views
+  - pagecount_desktop_views = the monthly views of the main English Wikipedia pages from Jan. 2008 through July 2016
+  - pagecount_mobile_views = the monthly views of the mobile version of the English Wikipedia pages from Jan. 2008 through July 2016
+  - pageview_all_views = pageview_desktop_views + pageview_mobile_views
+  - pageview_desktop_views = the monthly views by people rather than bots or web crawlers of the main English Wikipedia pages from July 2015 through Sept. 2017
+  - pageview_mobile_views = the monthly views by people rather than bots or web crawlers of both the mobile English Wikipedia pages and via the mobile app from July 2015 through Sept. 2017
+
+
+  
 
