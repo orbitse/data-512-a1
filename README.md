@@ -2,10 +2,7 @@
 
 ### __About Project__  
 
-  The goal of this project is to follow best practices for open scientific research while constructing, analyzing,  
-  and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through Sept. 30, 2017.  
-  The resulting project should contain enough information to be fully reproducible by others:  
-  from data collection to data analysis.  
+  The goal of this project is to follow best practices for open scientific research while constructing, analyzing, and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through Sept. 30, 2017. The resulting project should contain enough information to be fully reproducible by others: from data collection to data analysis.  
 
   This project documents:  
   > (1) the code to combine Wikipedia traffic data from two Wikimedia REST APIs into a single dataset,  
