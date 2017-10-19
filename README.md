@@ -4,9 +4,12 @@
 
   The goal of this project is to follow best practices for open scientific research while constructing, analyzing, and publishing a dataset of monthly traffic on the pages in English Wikipedia from July 1, 2008 through September 30, 2017. The resulting project should contain enough information to be fully reproducible by others: from data collection to data analysis.  
 
-  This project documents (1) the code to combine Wikipedia traffic data from two different Wikimedia REST API endpoints into a single dataset, (2) the data wrangling steps necessary to consolidate five JSON files into a single CSV file, and (3) the visual analysis of the clean data.  
+  This project documents:  
+  > (1) the code to combine Wikipedia traffic data from two different Wikimedia REST API endpoints into a single dataset,  
+  > (2) the data wrangling steps necessary to consolidate five JSON files into a single CSV file, and  
+  > (3) the visual analysis of the formatted data.  
 
-  This README file contains the information and references needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
+  This README file and the Jupyter Notebook file, hcds-a1-data-curation.ipynb, contain the information and references needed to reproduce the analysis, including a description of the data and all relevant resources and documentation, with hyperlinks to those resources.  
   
 ### __About Data__
 
@@ -16,11 +19,11 @@ The Wikipedia data was gathered from the Wikimedia REST API, Wikimedia Foundatio
 #### License
 This Wikimedia Foundation data is licensed under an Apache 2.0 License, which includes in part:  
 
-Unless required by applicable law or agreed to in writing, software 
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.  
+> Unless required by applicable law or agreed to in writing, software  
+> distributed under the License is distributed on an "AS IS" BASIS,  
+> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+> See the License for the specific language governing permissions and  
+> limitations under the License.  
 
 For more information on the this license, see [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
 
@@ -54,7 +57,8 @@ You will need python 3.X and the following python libraries to run the code in h
   - [pandas](http://pandas.pydata.org) : will be used for data processing
   - [seaborn](http://seaborn.pydata.org) -- Note: this library is only for style purposes and is not essential
   
-  If necessary, you can pip install any of the above libraries, _e.g._ `pip install requests` or `pip3 install requests`.  
+  If necessary, you can pip install any of the above libraries, for example:  
+  `pip install requests` or `pip3 install requests`.  
   Additionally, if you have any version of python 3.X installed, you should already have the csv, json, and requests dependency libraries installed. These libraries will be used to get and save data in notebook file, hcds-a1-data-curation.ipynb. 
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv  
@@ -62,8 +66,12 @@ You will need python 3.X and the following python libraries to run the code in h
 The columns in the final, consolidated CSV file include: year, month, pagecount_all_views, pagecount_desktop_views, pagecount_mobile_views, pageview_all_views, pageview_desktop_views, and pageview_mobile_views.  
 
  - pagecount_all_views = pagecount_desktop_views + pagecount_mobile_views
- - pagecount_desktop_views: monthly views of the main English Wikipedia pages from Jan. 2008 - July 2016
- - pagecount_mobile_views: monthly views of the mobile version of the English Wikipedia pages from. Jan. 2008 - July 2016
+ - pagecount_desktop_views: monthly views of the main English Wikipedia pages  
+   from Jan. 2008 - July 2016
+ - pagecount_mobile_views: monthly views of the mobile version of the English Wikipedia  
+   pages from. Jan. 2008 - July 2016
  - pageview_all_views = pageview_desktop_views + pageview_mobile_views
- - pageview_desktop_views: monthly page views by users rather than bots or web crawlers of the main English Wikipedia pages from July 2015 \- Sept. 2017
- - pageview_mobile_views: monthly page views by users of both the mobile English Wikipedia pages and via the mobile app from July 2015 \- Sept. 2017  
+ - pageview_desktop_views: monthly page views by users rather than bots or web crawlers  
+   of the main English Wikipedia pages from July 2015 \- Sept. 2017
+ - pageview_mobile_views: monthly page views by users of both the mobile English Wikipedia  
+   pages and via the mobile app from July 2015 \- Sept. 2017  
