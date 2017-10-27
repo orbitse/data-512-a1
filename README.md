@@ -50,16 +50,15 @@ In general, a REpresentational State Transfer (REST) Application-Programming Int
 
 Specifically, the Wikipedia page view data used in this project came from two REST APIs: Pagecounts API and Pageviews API. 
 
- - __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from January 2008 through July 2016.  
- This older, legacy Pagecount API does not allow you to filter by user, so the monthly counts include all  
- the views by people, bots, and web crawlers.  
+ - __Pagecounts API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from Jan. 2008 through July 2016.  
+    * This older, legacy Pagecount API does not allow you to filter by user, so the monthly counts include all  
+  the views by people, bots, and web crawlers.  
 
  - __Pageviews API__ ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through current day.  
- The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the  
- agent parameter to agent = user.  
+    * The Pageview API gives you the ability to exclude traffic from spiders and crawlers, by setting the  
+  agent parameter to agent = user.  
  
-The above documentation links explain the parameters you can set. For example, both the Pageview and Pagecount APIs allow  
-you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.  
+The documentation linked above explain the parameters you can set. For example, both the Pageview and Pagecount APIs allow you to get data on page views of other Wikipedia pages if you don't want the views of all English Wikipedia pages.  
 
 For additional information about how the APIs were used to collect the data used in this project, see the Jupyter Notebook file, [`hcds-a1-data-curation.ipynb`](https://raw.githubusercontent.com/orbitse/data-512-a2/master/hcds-a1-data-curation.ipynb).
  
@@ -77,9 +76,12 @@ You will need Python 3.X and the following Python libraries to run the code in `
   
   If necessary, you can pip install any of the above libraries, for example:  
   `pip install matplotlib` or `pip3 install matplotlib`.  
+  
   Additionally, if you have any version of Python 3.X installed, you should already have the csv, json,  
   and requests libraries installed. These dependency libraries will be used to get and save data in the notebook  
-  file, `hcds-a1-data-curation.ipynb`. 
+  file, `hcds-a1-data-curation.ipynb`.  
+  
+  If you need to download Python 3, you may want to download a version of Python 3 by downloading Anaconda ([Download](https://www.anaconda.com/download/), [Documentation](https://docs.anaconda.com/anaconda/)).  
 
 ### Final CSV Data File: en-wikipedia_traffic_200801-201709.csv  
 
